@@ -1,101 +1,77 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import React from 'react';
+import { Bell, HelpCircle } from 'lucide-react';
+
+export default function BookingApp() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen booking-blue text-white">
+      <header className="p-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold">Booking.com</h1>
+        <div className="flex items-center space-x-4">
+          <div className="w-8 h-8 booking-yellow rounded-full"></div>
+          <HelpCircle className="w-6 h-6" />
+          <button className="booking-button-secondary">Register</button>
+          <button className="booking-button-secondary">Sign in</button>
+        </div>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <nav className="flex justify-start space-x-6 p-4 bg-blue-800">
+        <button className="booking-button-secondary">Stays</button>
+        <button className="booking-button-secondary">Flights</button>
+        <button className="booking-button-secondary">Flight + Hotel</button>
+        <button className="booking-button-secondary">Car rentals</button>
+        <button className="booking-button-secondary">Attractions</button>
+        <button className="booking-button-secondary">Airport taxis</button>
+      </nav>
+
+      <main className="p-8">
+        <h2 className="booking-heading">Compare and book flights with ease</h2>
+        <p className="booking-subheading">Discover your next dream destination</p>
+
+        <div className="booking-card p-6">
+          <div className="flex space-x-4 mb-4">
+            <div className="flex items-center space-x-2">
+              <input type="radio" id="round-trip" name="trip-type" className="booking-radio" defaultChecked />
+              <label htmlFor="round-trip" className="booking-label">Round-trip</label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <input type="radio" id="one-way" name="trip-type" className="booking-radio" />
+              <label htmlFor="one-way" className="booking-label">One-way</label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <input type="radio" id="multi-city" name="trip-type" className="booking-radio" />
+              <label htmlFor="multi-city" className="booking-label">Multi-city</label>
+            </div>
+          </div>
+
+          <div className="flex space-x-4 mb-4">
+            <select className="booking-select">
+              <option>Economy</option>
+            </select>
+            <div className="flex items-center">
+              <input type="checkbox" id="direct-flights" className="booking-checkbox" />
+              <label htmlFor="direct-flights" className="ml-2 booking-label">Direct flights only</label>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-4 gap-4">
+            <input type="text" placeholder="PAT Jay Prakash Narayan Airport" className="booking-input" />
+            <input type="text" placeholder="Where to?" className="booking-input" />
+            <input type="date" className="booking-input" />
+            <select className="booking-select">
+              <option>1 adult</option>
+            </select>
+          </div>
+
+          <button className="booking-button-primary mt-4 w-full">Search</button>
+        </div>
+
+        <div className="mt-8">
+          <h3 className="text-2xl font-bold mb-2">Popular flights near you</h3>
+          <p>Find deals on domestic and international flights</p>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
