@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { Bell, HelpCircle } from 'lucide-react';
+import { HelpCircle } from 'lucide-react'; // Removed Bell
+// import { Button } from "@/components/ui/button";
 
 export default function BookingApp() {
   return (
