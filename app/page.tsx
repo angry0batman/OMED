@@ -5,7 +5,7 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
+import Image from 'next/image';
 // import { HelpCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -17,18 +17,18 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function BookingApp() {
   return (
-    <div className="min-h-screen bg-[#003580] text-white">
+    <div className="min-h-screen bg-black text-white">
       <header className="p-4 flex justify-between items-center">
         <h1 className="text-3xl font-bold">OMED</h1>
         <div className="flex items-center space-x-4">
           <div className="w-8 h-8 bg-gradient-to-b from-orange-400 to-orange-600 rounded-full"></div>
          
-          <Button variant="outline" className="text-white border-white hover:bg-blue-700">Register</Button>
-          <Button variant="outline" className="text-white border-white hover:bg-blue-700">Sign in</Button>
+          <Button variant="outline" className="text-black border-white hover:bg-blue-700">Register</Button>
+          <Button variant="outline" className="text-black border-white hover:bg-blue-700">Sign in</Button>
         </div>
       </header>
 
-      <nav className="flex justify-start space-x-6 p-4 bg-[#003580] border-t border-b border-blue-400">
+      <nav className="flex justify-start space-x-6 p-4 bg-orange-500 border-t border-b border-blue-400">
         <Button variant="ghost" className="text-white hover:bg-blue-700">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
             <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
@@ -51,7 +51,7 @@ export default function BookingApp() {
         <h2 className="text-5xl font-bold mb-4">Compare and book flights with ease</h2>
         <p className="text-2xl mb-8">Discover your next dream destination</p>
 
-        <div className="bg-yellow-400 p-6 rounded-lg text-black mb-8">
+        <div className="bg-orange-500 p-6 rounded-lg text-white mb-8">
           <RadioGroup defaultValue="round-trip" className="flex space-x-4 mb-4">
             <div className="flex items-center space-x-2">
               <RadioGroupItem value="round-trip" id="round-trip" />
@@ -106,7 +106,7 @@ export default function BookingApp() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
             {['Bangkok', 'Dubai', 'Doha', 'Frankfurt'].map((city, index) => (
               <div key={index} className="bg-gray-100 rounded-lg overflow-hidden">
-                <Image src={`/placeholder.svg?height=200&width=300`} alt={city} width={300} height={200} className="w-full h-40 object-cover" />
+                <Image src={`https://hblimg.mmtcdn.com/content/hubble/img/bangkok/mmt/destination/m_Bangkok-landscape_l_400_640.jpg?im=Resize=(288,162)`} alt={city} width={300} height={200} className="w-full h-40 object-cover" />
                 <div className="p-4">
                   <h4 className="font-bold">Patna to {city}</h4>
                   <p className="text-sm text-gray-600">Sep 16 - Sep 23 · Round-trip</p>
@@ -123,7 +123,7 @@ export default function BookingApp() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {['New Delhi', 'Bangalore', 'Mumbai', 'Kolkata'].map((city, index) => (
               <div key={index} className="bg-gray-100 rounded-lg overflow-hidden">
-                <Image src={`/placeholder.svg?height=200&width=300`} alt={city} width={300} height={200} className="w-full h-40 object-cover" />
+                <Image src={`https://www.traveloffpath.com/wp-content/uploads/2022/06/Amazing-view-of-the-city-of-Bangkok-Thailand.jpg`} alt={city} width={300} height={200} className="w-full h-40 object-cover" />
                 <div className="p-4">
                   <h4 className="font-bold">{city}, India</h4>
                   <p className="text-sm text-gray-600">Flights from Jay Prakash Narayan Airport</p>
@@ -139,13 +139,15 @@ export default function BookingApp() {
             <div>
               <h3 className="text-2xl font-bold">Your account, your travel</h3>
               <p className="text-gray-600">All your trip details in one place</p>
-            </div>
-            <Image src="/placeholder.svg?height=100&width=100" alt="Genius" width={100} height={100} />
-          </div>
+            
           <p className="mb-4">Sign in to book faster and manage your trip with ease</p>
+          
           <div className="flex space-x-4">
             <Button className="bg-blue-500 hover:bg-blue-600 text-white">Sign in</Button>
             <Button variant="outline" className="text-blue-500 border-blue-500">Register</Button>
+          </div>
+          </div>
+            <Image src="https://121clicks.com/wp-content/uploads/2014/08/kolkata_photography_01.jpg" alt="Genius" width={300} height={100} />
           </div>
         </div>
 
@@ -167,7 +169,7 @@ export default function BookingApp() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {['New Delhi', 'Bangalore', 'Mumbai', 'Kolkata', 'Pune', 'Hyderabad', 'Panaji', 'Chennai', 'Chandigarh'].map((city, index) => (
               <div key={index} className="flex items-center space-x-4">
-                <Image src={`/placeholder.svg?height=50&width=50`} alt={city} width={50} height={50} className="rounded-md" />
+                <Image src={`https://121clicks.com/wp-content/uploads/2014/08/kolkata_photography_01.jpg`} alt={city} width={50} height={50} className="rounded-md" />
                 <div>
                   <h4 className="font-bold">Patna to {city}</h4>
                   <p className="text-sm text-gray-600">Shortest flight time: 2h 19m</p>
