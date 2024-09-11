@@ -6,7 +6,7 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { HelpCircle } from 'lucide-react';
+// import { HelpCircle } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select } from "@/components/ui/select"
