@@ -19,7 +19,7 @@ export default function BookingApp() {
   return (
     <div className="min-h-screen bg-[#003580] text-white">
       <header className="p-4 flex justify-between items-center">
-        <h1 className="text-3xl font-bold">Booking.com</h1>
+        <h1 className="text-3xl font-bold">OMED</h1>
         <div className="flex items-center space-x-4">
           <div className="w-8 h-8 bg-gradient-to-b from-orange-400 to-orange-600 rounded-full"></div>
          
